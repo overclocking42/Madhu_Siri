@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "952968964340",
+    "project_id": "madhu-siri-701cb",
+    "storage_bucket": "madhu-siri-701cb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:952968964340:android:96da0a19c9299360f596a1",
+        "android_client_info": {
+          "package_name": "com.example.madhu_siri"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAt2SkQcdi5YGCX02O1SDE6HbG9S9F_rUs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
