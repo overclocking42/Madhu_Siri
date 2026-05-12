@@ -2,38 +2,55 @@ package com.example.madhu_siri.ui.screens
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.example.madhu_siri.viewmodel.AuthViewModel
+import com.example.madhu_siri.viewmodel.AuthState
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun RoleSelectionScreen(viewModel: AuthViewModel) {
+fun RoleSelectionScreen(authViewModel: AuthViewModel, onRoleSelected: (String) -> Unit) {
+    var selectedRole by remember { mutableStateOf("") }
+    val authState by authViewModel.authState.collectAsState()
+
     Column(
-        modifier = Modifier.fillMaxSize().padding(24.dp),
+        modifier = Modifier.fillMaxSize().padding(16.dp),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("Choose Your Role", style = MaterialTheme.typography.headlineMedium, color = MaterialTheme.colorScheme.onBackground)
-        Spacer(modifier = Modifier.height(32.dp))
-        
-        Button(
-            onClick = { viewModel.setRole("BEEKEEPER") },
-            modifier = Modifier.fillMaxWidth().height(60.dp),
-            colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary)
+        Text(
+            text = "Select Your Role",
+            style = MaterialTheme.typography.headlineMedium,
+            modifier = Modifier.padding(bottom = 32.dp)
+        )
+
+        // Role selection options (e.g., Beekeeper, Farmer)
+        Row(
+            horizontalArrangement = Arrangement.spacedBy(16.dp),
+            modifier = Modifier.padding(bottom = 32.dp)
         ) {
-            Text("I am a Beekeeper", style = MaterialTheme.typography.titleLarge)
+            OutlinedButton(onClick = { selectedRole = "BEEKEEPER" })
+            {
+                Text("Beekeeper")
+            }
+            OutlinedButton(onClick = { selectedRole = "FARMER" })
+            {
+                Text("Farmer")
+            }
         }
-        
-        Spacer(modifier = Modifier.height(16.dp))
-        
+
         Button(
-            onClick = { viewModel.setRole("FARMER") },
-            modifier = Modifier.fillMaxWidth().height(60.dp),
-            colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.secondary)
+            onClick = {
+                if (selectedRole.isNotEmpty()) {
+                    authViewModel.setRole(selectedRole)
+                    onRoleSelected(selectedRole)
+                }
+            },
+            enabled = selectedRole.isNotEmpty() && authState !is AuthState.Loading // Disable if no role is selected or if loading
         ) {
-            Text("I am a Farmer", style = MaterialTheme.typography.titleLarge)
+            Text("Continue")
         }
     }
 }

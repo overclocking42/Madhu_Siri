@@ -19,3 +19,13 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+# Firestore reflection needs model classes and their default constructors/fields.
+-keep class com.example.madhu_siri.data.model.User { *; }
+-keep class com.example.madhu_siri.data.model.Hive { *; }
+-keep class com.example.madhu_siri.data.model.SprayEvent { *; }
+-keep class com.example.madhu_siri.data.model.HealthLog { *; }
+-keep class com.example.madhu_siri.data.model.NotificationAlert { *; }
+
+# Keep Kotlin metadata used by some reflection-based libraries.
+-keep class kotlin.Metadata { *; }
