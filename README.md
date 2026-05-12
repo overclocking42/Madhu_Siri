@@ -2,6 +2,8 @@
 
 Madhu-Siri is a production-style Android app built with Kotlin, Jetpack Compose, Firebase, and Google Maps to help farmers and beekeepers coordinate spray safety inside a 2 km radius.
 
+The app is ready to install and use as APK, just download, install and use [App](https://github.com/overclocking42/Madhu_Siri/blob/main/app/release/app-release.apk) and for more info about this project, reviewing, cloning, modifying on your version and run on your own device, check these [documents](https://github.com/overclocking42/Madhu_Siri/tree/main/docs)
+
 ## What the app does
 
 - Farmers create spray alerts before pesticide use
