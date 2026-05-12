@@ -2,7 +2,7 @@
 
 Madhu-Siri is a real-time bee-farmer coordination app built to prevent honeybee deaths during pesticide spraying. Beekeepers pin hive locations and define bee-out timings. Farmers create spray alerts only when the selected time is safe for nearby hives within a 2 km radius.
 
-The app is ready to install and use as APK, just download, install and use [App](/Madhu_Siri/app/release/app-release.apk)
+The app is ready to install and use as APK, just download, install and use [App](https://github.com/overclocking42/Madhu_Siri/blob/main/app/release/app-release.apk)
 
 
 ## Problem
