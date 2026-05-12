@@ -1,6 +1,6 @@
 # Madhu-Siri Release And Production Notes
 
-The app is ready to install and use as APK, just download, install and use [App](/Madhu_Siri/app/release/app-release.apk)
+The app is ready to install and use as APK, just download, install and use [App](https://github.com/overclocking42/Madhu_Siri/blob/main/app/release/app-release.apk)
 
 
 ## Release signing
