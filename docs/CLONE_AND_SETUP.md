@@ -1,6 +1,6 @@
 # Madhu-Siri Clone And Setup
 
-The app is ready to install and use as APK, just download, install and use [App](https://github.com/overclocking42/Madhu_Siri/blob/main/app/release/app-release.apk) and for more info about this project, reviewing, cloning, modifying on your version and run on your own device, check these [documents](https://github.com/overclocking42/Madhu_Siri/tree/main/docs)
+The app is ready to install and use as APK, just download, install and use [App](https://github.com/overclocking42/Madhu_Siri/blob/main/app/release/app-release.apk)
 
 ## Goal
 
